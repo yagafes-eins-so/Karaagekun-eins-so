@@ -166,6 +166,20 @@ h2{
 
 /* ---------- ボタン ---------- */
 
+.hero-actions{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
 .hero-button{
 
     display:inline-block;
@@ -197,6 +211,38 @@ h2{
     transform:translateY(-5px);
 
     box-shadow:0 15px 30px rgba(0,0,0,.2);
+
+}
+
+.hero-link{
+
+    display:inline-block;
+
+    color:#d84315;
+
+    text-decoration:none;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    border:2px solid #d84315;
+
+    border-radius:999px;
+
+    padding:12px 24px;
+
+    background:#fff;
+
+    transition:.3s;
+
+}
+
+.hero-link:hover{
+
+    background:#d84315;
+
+    color:white;
 
 }
 
@@ -485,6 +531,46 @@ h2{
     font-weight:700;
 
     margin:0;
+
+}
+
+.instagram-link-wrapper{
+
+    margin-top:20px;
+
+}
+
+.instagram-link{
+
+    display:inline-block;
+
+    margin-top:18px;
+
+    color:#d84315;
+
+    text-decoration:none;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    border:2px solid #d84315;
+
+    border-radius:999px;
+
+    padding:12px 24px;
+
+    background:#fff;
+
+    transition:.3s;
+
+}
+
+.instagram-link:hover{
+
+    background:#d84315;
+
+    color:white;
 
 }
 
