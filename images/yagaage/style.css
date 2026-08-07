@@ -1,0 +1,1094 @@
+/* =========================================
+   やがあげクン 公式サイト
+   style.css Part1
+========================================= */
+
+/* ---------- 共通 ---------- */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Noto Sans JP',sans-serif;
+
+    background:#fff8ec;
+
+    color:#333;
+
+    line-height:1.8;
+
+}
+
+img{
+
+    max-width:100%;
+    display:block;
+
+}
+
+.image-note{
+
+    margin-top:10px;
+    color:#666;
+    font-size:0.9rem;
+    text-align:center;
+}
+
+.container{
+
+    width:90%;
+    max-width:1200px;
+
+    margin:auto;
+
+}
+
+section{
+
+    padding:90px 0;
+
+}
+
+h2{
+
+    text-align:center;
+
+    font-size:42px;
+
+    color:#d84315;
+
+    margin-bottom:50px;
+
+    font-weight:900;
+
+}
+
+
+
+/* ---------- Hero ---------- */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:30px;
+
+    text-align:center;
+
+    background:linear-gradient(
+        rgba(255,215,0,0.15),
+        rgba(255,193,7,0.35)
+    );
+
+    padding:40px 20px;
+
+}
+
+.hero-content{
+
+    max-width:700px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:25px;
+
+}
+
+.hero-logo{
+
+    width:min(330px, 70vw);
+
+    margin:0 auto 20px;
+
+    animation:float 3s ease-in-out infinite;
+
+    object-fit:contain;
+
+    filter:drop-shadow(0 12px 24px rgba(0,0,0,.18));
+
+}
+
+.hero h1{
+
+    font-size:72px;
+
+    color:#d84315;
+
+    margin-bottom:20px;
+
+    font-weight:900;
+
+}
+
+.hero .organization{
+
+    font-size:20px;
+
+    color:#333;
+
+    font-weight:700;
+
+}
+
+.catch{
+
+    font-size:30px;
+
+    font-weight:bold;
+
+    color:#444;
+
+    margin-bottom:40px;
+
+}
+
+
+
+/* ---------- ボタン ---------- */
+
+.hero-actions{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+.hero-button{
+
+    display:inline-block;
+
+    background:#ff5722;
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+    padding:18px 45px;
+
+    border-radius:50px;
+
+    transition:.3s;
+
+    box-shadow:0 8px 18px rgba(0,0,0,.15);
+
+}
+
+.hero-button:hover{
+
+    background:#e64a19;
+
+    transform:translateY(-5px);
+
+    box-shadow:0 15px 30px rgba(0,0,0,.2);
+
+}
+
+.hero-link{
+
+    display:inline-block;
+
+    color:#d84315;
+
+    text-decoration:none;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    border:2px solid #d84315;
+
+    border-radius:999px;
+
+    padding:12px 24px;
+
+    background:#fff;
+
+    transition:.3s;
+
+}
+
+.hero-link:hover{
+
+    background:#d84315;
+
+    color:white;
+
+}
+
+
+
+/* ---------- イベント ---------- */
+
+.event{
+
+    background:white;
+
+}
+
+.event-box{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    gap:30px;
+
+}
+
+.event-item{
+
+    background:#fffdf8;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.event-item:hover{
+
+    transform:translateY(-6px);
+
+}
+
+.event-item h3{
+
+    font-size:28px;
+
+    color:#e65100;
+
+    margin-bottom:20px;
+
+}
+
+.event-item p{
+
+    font-size:20px;
+
+}
+
+
+
+/* ---------- アニメーション ---------- */
+
+@keyframes float{
+
+    0%{
+
+        transform:translateY(0px);
+
+    }
+
+    50%{
+
+        transform:translateY(-12px);
+
+    }
+
+    100%{
+
+        transform:translateY(0px);
+
+    }
+
+}
+
+/* =========================================
+   Part2
+   メニュー・アクセス・メッセージ・フッター
+========================================= */
+
+
+/* ---------- MENU ---------- */
+
+#menu{
+
+    background:#fff4d8;
+
+}
+
+.menu-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4, minmax(0, 1fr));
+
+    gap:35px;
+
+}
+
+@media (max-width: 1024px){
+
+    .menu-grid{
+
+        grid-template-columns:repeat(2, minmax(0, 1fr));
+
+    }
+
+}
+
+@media (max-width: 600px){
+
+    .menu-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    background:white;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+
+    transition:.35s;
+
+}
+
+.menu-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 20px 35px rgba(0,0,0,.18);
+
+}
+
+.menu-card img{
+
+    width:100%;
+
+    height:250px;
+
+    object-fit:cover;
+
+}
+
+.menu-card h3{
+
+    text-align:center;
+
+    margin-top:20px;
+
+    font-size:28px;
+
+    color:#d84315;
+
+}
+
+.price{
+
+    text-align:center;
+
+    font-size:34px;
+
+    font-weight:bold;
+
+    color:#ff5722;
+
+    margin:18px 0 28px;
+
+}
+
+
+
+/* ---------- ACCESS ---------- */
+
+.access{
+
+    background:white;
+
+}
+
+.address{
+
+    text-align:center;
+
+    font-size:22px;
+
+    margin-bottom:35px;
+
+}
+
+.map{
+
+    width:100%;
+
+    max-width:900px;
+
+    margin:0 auto;
+
+    overflow:hidden;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+}
+
+.map iframe{
+
+    display:block;
+
+}
+
+.map-button{
+
+    text-align:center;
+
+    margin-top:35px;
+
+}
+
+.map-button a{
+
+    display:inline-block;
+
+    text-decoration:none;
+
+    color:white;
+
+    background:#4285F4;
+
+    padding:15px 35px;
+
+    border-radius:50px;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.map-placeholder{
+
+    max-width:900px;
+
+    margin:35px auto 0;
+
+    text-align:center;
+
+}
+
+.map-placeholder__card{
+
+    background:#fff4d8;
+
+    border:2px dashed #ffb74d;
+
+    border-radius:20px;
+
+    padding:30px 25px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.map-placeholder__card p{
+
+    font-size:20px;
+
+    color:#d84315;
+
+    font-weight:700;
+
+    margin:0;
+
+}
+
+.instagram-link-wrapper{
+
+    margin-top:20px;
+
+}
+
+.instagram-link{
+
+    display:inline-block;
+
+    margin-top:18px;
+
+    color:#d84315;
+
+    text-decoration:none;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    border:2px solid #d84315;
+
+    border-radius:999px;
+
+    padding:12px 24px;
+
+    background:#fff;
+
+    transition:.3s;
+
+}
+
+.instagram-link:hover{
+
+    background:#d84315;
+
+    color:white;
+
+}
+
+.map-button a:hover{
+
+    background:#3367d6;
+
+    transform:translateY(-3px);
+
+}
+
+
+
+/* ---------- MESSAGE ---------- */
+
+.message{
+
+    background:linear-gradient(135deg,#ffe082,#ffca28);
+
+    text-align:center;
+
+}
+
+.message h2{
+
+    color:#bf360c;
+
+    margin-bottom:25px;
+
+}
+
+.message p{
+
+    font-size:24px;
+
+    font-weight:500;
+
+}
+
+
+
+/* ---------- FOOTER ---------- */
+
+footer{
+
+    background:#d84315;
+
+    color:white;
+
+    text-align:center;
+
+    padding:35px 20px;
+
+}
+
+footer p{
+
+    font-size:18px;
+
+}
+
+
+
+/* ---------- ボタン共通 ---------- */
+
+.hero-button,
+.map-button a{
+
+    cursor:pointer;
+
+}
+
+
+
+/* ---------- ホバー時アニメーション ---------- */
+
+.hero-button:hover,
+.map-button a:hover{
+
+    transition:0.3s ease;
+
+}
+
+
+
+/* ---------- 見出し装飾 ---------- */
+
+h2::after{
+
+    content:"";
+
+    display:block;
+
+    width:80px;
+
+    height:5px;
+
+    background:#ff9800;
+
+    margin:15px auto 0;
+
+    border-radius:10px;
+
+}
+
+
+
+/* ---------- 商品画像 ---------- */
+
+.menu-card img{
+
+    transition:.4s;
+
+}
+
+.menu-card:hover img{
+
+    transform:scale(1.05);
+
+}
+
+
+
+/* ---------- カード共通 ---------- */
+
+.menu-card,
+.event-item{
+
+    border:2px solid rgba(255,152,0,.15);
+
+}
+
+
+
+/* ---------- セクション余白 ---------- */
+
+.event,
+#menu,
+.access,
+.message{
+
+    scroll-margin-top:80px;
+
+}
+
+/* =========================================
+   Part3
+   レスポンシブ・アニメーション・仕上げ
+========================================= */
+
+
+/* ---------- ページ読み込み ---------- */
+
+body{
+
+    opacity:0;
+
+    transition:opacity .8s ease;
+
+}
+
+body.loaded{
+
+    opacity:1;
+
+}
+
+
+/* ---------- スクロールアニメーション ---------- */
+
+.hidden{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+    transition:all .8s ease;
+
+}
+
+.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+/* ---------- Hero ---------- */
+
+.hero{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    radial-gradient(circle at 20% 20%, rgba(255,255,255,.35), transparent 30%),
+    radial-gradient(circle at 80% 30%, rgba(255,255,255,.25), transparent 25%),
+    radial-gradient(circle at 50% 80%, rgba(255,255,255,.2), transparent 30%);
+
+    pointer-events:none;
+
+}
+
+
+/* ---------- Hero文字 ---------- */
+
+.hero-content{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.hero h1{
+
+    text-shadow:3px 3px 8px rgba(0,0,0,.15);
+
+}
+
+.catch{
+
+    max-width:600px;
+
+    margin:0 auto 40px;
+
+}
+
+
+/* ---------- ボタン ---------- */
+
+.hero-button,
+
+.map-button a{
+
+    transition:
+
+        background .3s,
+
+        transform .3s,
+
+        box-shadow .3s;
+
+}
+
+.hero-button:hover,
+
+.map-button a:hover{
+
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+
+}
+
+
+/* ---------- メニュー ---------- */
+
+.menu-card{
+
+    position:relative;
+
+}
+
+.menu-card::after{
+
+    display:none;
+
+}
+
+
+/* ---------- カード ---------- */
+
+.event-item,
+
+.menu-card{
+
+    transition:
+
+        transform .35s,
+
+        box-shadow .35s;
+
+}
+
+
+/* ---------- 見出し ---------- */
+
+h2{
+
+    letter-spacing:2px;
+
+}
+
+
+/* ---------- スマホ ---------- */
+
+@media (max-width:900px){
+
+.hero{
+
+    min-height:85vh;
+
+}
+
+.hero-logo{
+
+    width:240px;
+
+}
+
+.hero h1{
+
+    font-size:52px;
+
+}
+
+.catch{
+
+    font-size:24px;
+
+}
+
+.event-item h3{
+
+    font-size:24px;
+
+}
+
+.event-item p{
+
+    font-size:18px;
+
+}
+
+.price{
+
+    font-size:30px;
+
+}
+
+}
+
+
+
+/* ---------- 小さいスマホ ---------- */
+
+@media (max-width:600px){
+
+section{
+
+    padding:70px 0;
+
+}
+
+.container{
+
+    width:94%;
+
+}
+
+.hero{
+
+    padding:30px 15px;
+
+}
+
+.hero-logo{
+
+    width:190px;
+
+}
+
+.hero h1{
+
+    font-size:42px;
+
+}
+
+.catch{
+
+    font-size:20px;
+
+}
+
+.hero-button{
+
+    width:100%;
+
+    text-align:center;
+
+}
+
+.menu-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.menu-card img{
+
+    height:220px;
+
+}
+
+.event-box{
+
+    grid-template-columns:1fr;
+
+}
+
+.address{
+
+    font-size:18px;
+
+}
+
+.map iframe{
+
+    height:320px;
+
+}
+
+.message h2{
+
+    font-size:32px;
+
+}
+
+.message p{
+
+    font-size:18px;
+
+}
+
+footer{
+
+    padding:25px;
+
+}
+
+}
+
+
+
+/* ---------- 大画面 ---------- */
+
+@media (min-width:1400px){
+
+.container{
+
+    max-width:1350px;
+
+}
+
+.hero h1{
+
+    font-size:90px;
+
+}
+
+.catch{
+
+    font-size:36px;
+
+}
+
+.menu-card img{
+
+    height:300px;
+
+}
+
+}
+
+
+
+/* ---------- スクロールバー ---------- */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#ff9800;
+
+    border-radius:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#fff4d8;
+
+}
+
+
+
+/* ---------- 選択色 ---------- */
+
+::selection{
+
+    background:#ff9800;
+
+    color:white;
+
+}
