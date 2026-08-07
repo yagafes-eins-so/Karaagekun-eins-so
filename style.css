@@ -406,10 +406,14 @@ footer {
     }
 
     h2 {
-        font-size: 1.08rem;
-        padding: 8px 12px;
+        font-size: 1rem;
+        padding: 7px 10px;
         white-space: nowrap;
         letter-spacing: 0.01em;
+        border-radius: 999px;
+        max-width: calc(100vw - 24px);
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 }
 
