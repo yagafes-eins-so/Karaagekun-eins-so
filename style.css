@@ -75,6 +75,7 @@ h2 {
     border-radius: 999px;
     background: linear-gradient(90deg, var(--orange), var(--pink));
     box-shadow: 0 10px 24px rgba(255, 77, 141, 0.2);
+    white-space: nowrap;
 }
 
 section .container {
@@ -402,6 +403,12 @@ footer {
     .hero-button,
     .hero-link {
         width: 100%;
+    }
+
+    h2 {
+        font-size: 1.35rem;
+        padding: 10px 16px;
+        white-space: nowrap;
     }
 }
 
