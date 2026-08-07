@@ -348,6 +348,25 @@ section .container {
     border-radius: 32px;
     margin: 0 20px;
     padding: 48px 24px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.message .container {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.message h2 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .message p {
@@ -411,9 +430,15 @@ footer {
         white-space: nowrap;
         letter-spacing: 0.01em;
         border-radius: 999px;
-        max-width: calc(100vw - 24px);
+        max-width: 100%;
         overflow: hidden;
         text-overflow: ellipsis;
+    }
+
+    .message {
+        margin: 0 12px;
+        padding: 32px 14px;
+        border-radius: 24px;
     }
 }
 
