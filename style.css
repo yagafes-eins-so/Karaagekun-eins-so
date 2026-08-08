@@ -1204,13 +1204,17 @@ section{
 
 .message h2{
 
-    font-size:32px;
+    font-size:clamp(14px,4.4vw,22px);
+
+    white-space:nowrap;
 
 }
 
 .message p{
 
-    font-size:18px;
+    font-size:clamp(12px,3.8vw,16px);
+
+    white-space:nowrap;
 
 }
 
